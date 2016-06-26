@@ -1,0 +1,1836 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>js</title></head><body><article class="markdown-body"><h4 id="1-pc-js"><a name="user-content-1-pc-js" href="#1-pc-js" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1. PC - js</h4>
+<ul>
+<li>
+<p>返回指定范围的随机数(m-n之间)的公式<br />
+<pre><code class="javascript">Math.random()*(n-m)+m
+</code></pre></p>
+</li>
+<li>
+<p><a href="http://stackoverflow.com/questions/1357118/event-preventdefault-vs-return-false">return false</a></p>
+</li>
+<li>
+<p><a href="http://www.75team.com/archives/201">return false</a><br />
+<pre><code class="javascript">// event.preventDefault()会阻挡预设要发生的事件.
+// event.stopPropagation()会阻挡发生冒泡事件.
+// 而return false则是前面两者的事情他都会做：
+// 他会做event.preventDefault();
+// 他会做event.stopPropagation();
+// 停止callback function的执行并且立即return回来
+</code></pre></p>
+</li>
+<li>
+<p>防止被Iframe嵌套<br />
+<pre><code class="javascript">if(top != self){
+    location.href = ”about:blank”;
+}
+</code></pre></p>
+</li>
+<li>
+<p>两种图片lazy加载的方式<br />
+第一个By JS中级交流群 成都-猎巫 第二个By 上海-zenki<br />
+<pre><code class="javascript">// @description 准备为图片预加载使用的插件
+// 使用的图片容器css类名为lazy-load-wrap
+// 图片真实地址为data-lazy-src
+// 当lazy-load-wrap容器进入视口，则开始替换容器内所有需要延迟加载的图片路径，并更改容器的加载状态
+//第一种方法
+$.fn.compassLazyLoad=function(){
+    var _HEIGHT=window.innerHeight,
+    _lazyLoadWrap=$('.lazy-load-wrap');
+
+    var methods={
+        setOffsetTop:function(){
+            $.each(_lazyLoadWrap,function(i,n){
+                $(n).attr({
+                    'top':n.offsetTop-_HEIGHT,
+                    'status':'wait'
+                });
+            })
+        },
+        isShow:function(){
+            var _scrollTop=$(window).scrollTop;
+            //利用image容器判断是否进入视口，而非image本身
+            $.each(_lazyLoadWrap,function(){
+                var _that=$(this);
+                if (_that.attr('status')==='done') {
+                    return;
+                };
+                if (_that.attr('top')&lt;=_scrollTop) {
+                    _that.find('img[data-lazy-src]').each(function(i,n){
+                        n.src=$(n).data('lazy-src');
+                    });
+                    _that.attr('status','done');
+                };
+            })
+        },
+        scroll:function(){
+            $(window).on('scroll',function(){
+                methods.isShow();
+            });
+        },
+        init:function(){
+            methods.setOffsetTop();
+            methods.isShow();
+            methods.scroll();
+        }
+    };
+    methods.init();
+
+}
+
+
+//第二种方法
+
+var exist=(function($){
+    var timer=null,
+    temp=[].slice.call($('.container'));
+    ret={};
+
+    for(var i=0,len=temp.length-1;i&lt;=len;i++){
+        ret[i]=temp[i];
+    }
+    var isExist=function(winTop,winEnd){
+        for(var i in ret){
+            console.log(ret);
+            var item=ret[i],
+            eleTop=item.offsetTop,
+            eleEnd=eleTop+item.offsetHeight;
+
+            if((eleTop&gt;winTop&amp;&amp;eleTop&lt;=winEnd)||(eleEnd&gt;winTop&amp;&amp;eleEnd&lt;=winEnd)){
+                $(item).css('background','none');
+                new Tab($(item).attr('id'),data).init;
+                delete ret[i];
+            }
+        }
+    }
+    return {
+        timer:timer;
+        isExist:isExist;
+    };
+})($);
+
+
+
+//第三种方法
+Zepto(function ($) {
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplay: 3000,
+        loop: true,
+        autoplayDisableOnInteraction: false
+    });
+    (function lazyLoad() {
+        var imgs = $(&quot;.lazyLoad&quot;);
+        var src = '';
+        $.each(imgs, function (index, item) {
+            src = $(item).attr('data-src');
+            $(item).attr('src', src);
+        });
+    })();
+});
+$(function () {
+    var lazyLoadTimerId = null;
+    /// 智能加载事件
+    $(window).bind(&quot;scroll&quot;, function () {
+        clearTimeout(lazyLoadTimerId);
+        lazyLoadTimerId = setTimeout(function () {
+            // 延迟加载所有图片
+            var isHttp = (location.protocol === &quot;http:&quot;);
+            $(&quot;#ym_images img&quot;).each(function () {
+                var self = $(this);
+                if (self.filter(&quot;:above-the-fold&quot;).length &gt; 0) {
+                    var originUrl = self.attr(&quot;data-original&quot;);
+                    self.attr(&quot;src&quot;, originUrl);
+                }
+            });
+        }, 500);
+    });
+});
+
+</code></pre></p>
+</li>
+<li>
+<p>某年某月的1号为星期几<br />
+<pre><code class="javascript">var weekday = [&quot;星期日&quot;, &quot;星期一&quot;, &quot;星期二&quot;, &quot;星期三&quot;, &quot;星期四&quot;, &quot;星期五&quot;, &quot;星期六&quot;];
+weekday[new Date(2015, 9, 1).getDay()]; //2015年10月1号
+</code></pre></p>
+</li>
+</ul>
+<h4 id="2-mobile-js"><a name="user-content-2-mobile-js" href="#2-mobile-js" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2. Mobile - js</h4>
+<ul>
+<li><a href="http://caibaojian.com/browser-ios-or-android.html">js 判断IOS, 安卓</a><br />
+<pre><code class="javascript">var u = navigator.userAgent, app = navigator.appVersion;
+var isAndroid = u.indexOf('Android') &gt; -1 || u.indexOf('Linux') &gt; -1; //android终端或者uc浏览器
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+alert('是否是Android：'+isAndroid);
+alert('是否是iOS：'+isiOS);
+</code></pre></li>
+</ul>
+<h4 id="3-weixin"><a name="user-content-3-weixin" href="#3-weixin" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3. <a href="http://loo2k.com/blog/detecting-wechat-client/">微信 weixin</a></h4>
+<ul>
+<li>
+<p>UserAgent 判断微信客户端<br />
+<pre><code class="javascript">// Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12F70 MicroMessenger/6.1.5 NetType/WIFI
+function isWechat() {
+    var ua = navigator.userAgent.toLowerCase();
+    return /micromessenger/i.test(ua) || /windows phone/i.test(ua);
+}
+</code></pre></p>
+</li>
+<li>
+<p>JS接口安全域名不填写，分享onMenuShareAppMessage直接会取默认值。<br />
+<pre><code class="javascript">// 分享onMenuShareAppMessage直接会取默认值
+</code></pre></p>
+</li>
+<li>
+<p>关闭当前页面<br />
+<pre><code class="javascript">WeixinJSBridge.call('closeWindow');
+</code></pre></p>
+</li>
+<li>
+<p><a href="http://www.cnblogs.com/true_to_me/p/3565039.html">支付接口方法调用必须在addevent里边调用</a><br />
+<pre><code class="javascript">document.addEventListener('WeixinJSBridgeReady', function onBridgeReady(){
+    that.initOrder();
+}, false);
+</code></pre></p>
+</li>
+<li>
+<p>支付接口方法调用必须在<br />
+<pre><code class="javascript">WeixinJSBridge.invoke('getBrandWCPayRequest', d, function(res){
+    if(res.err_msg == &quot;get_brand_wcpay_request:ok&quot;){
+        // alert(&quot;支付成功&quot;);
+        // union.release(d.orderId);
+        resetUrl();
+        paySuccess('home', d.orderId);
+    } else {
+        cancelOrder(d.orderId);
+        // alert(res.err_msg);
+    }
+    loading.hide();
+});
+</code></pre></p>
+</li>
+<li>
+<p>瀑布流无限加载实例<br />
+<pre><code class="javascript">// be dependent on jquery &amp; jquery.infinitescroll.min.js
+// insert this '&lt;div id=&quot;more&quot;&gt;&lt;a href=&quot;api?page=&quot;&gt;&lt;/a&gt;&lt;/div&gt;' to your page.html
+(function($){
+  $(function(){
+      var $container = $('.list-wrap-gd');
+      function layOutCallBack() {
+          $container.imagesLoaded(function(){
+              $container.masonry({
+                  itemSelector: '.item-bar',
+                  gutter: 10
+              });
+          });
+          $container.imagesLoaded().progress( function() {
+              $container.masonry('layout');
+          });
+      }
+
+      layOutCallBack();
+
+      $container.infinitescroll({
+          navSelector : &quot;#more&quot;,
+          nextSelector : &quot;#more a&quot;,
+          itemSelector : &quot;.item-bar&quot;,
+          pixelsFromNavToBottom: 300,
+          loading:{
+              img: &quot;/images/masonry_loading.gif&quot;,
+              msgText: ' ',
+              finishedMsg: &quot;&lt;em&gt;已经到最后一页&lt;/em&gt;&quot;,
+              finished: function(){
+                  $(&quot;#more&quot;).remove();
+                  $(&quot;#infscr-loading&quot;).hide();
+              }
+          },
+          errorCallback:function(){
+              $(window).unbind('.infscr');
+          },
+          pathParse: function (path, nextPage) {
+              var query = &quot;&quot;;
+              var keyword=$(&quot;#search_keyword&quot;).val();
+              var cat_id=$(&quot;#cat_id&quot;).val();
+              var brand_id=$(&quot;#brand_id&quot;).val();
+              var country_id = $(&quot;#country_id&quot;).val();
+              query = query + &quot;&amp;namekeyword=&quot;+keyword;
+              query = query +&quot;&amp;cat_id=&quot;+cat_id
+              query = query + &quot;&amp;brand_id=&quot; + brand_id;
+              query = query + &quot;&amp;country_id=&quot; + country_id;
+              path = [path,query];
+              return path;
+          }
+      },
+
+      function(newElements) {
+          var $newElems = $( newElements ).css({ opacity: 0 });
+          $newElems.imagesLoaded(function(){
+              $newElems.animate({ opacity: 1 });
+              $container.masonry( 'appended', $newElems, true );
+              layOutCallBack();
+          });
+      });
+  });
+})(jQuery);
+</code></pre></p>
+</li>
+<li>
+<p><a href="https://www.snip2code.com/Snippet/176582/--iOS-Safari----input---focus-fixed-----">iOS，Safari浏览器，input等表单focus后fixed元素错位问题</a><br />
+<pre><code class="javascript">if( /iPhone|iPod|iPad/i.test(navigator.userAgent) ) {
+  $(document).on('focus', 'input, textarea', function()
+  {
+     $('header').css(&quot;position&quot;, 'absolute');
+     $('footer').css(&quot;position&quot;, 'absolute');
+
+  });
+
+  $(document).on('blur', 'input, textarea', function()
+  {
+       $('header').css(&quot;position&quot;, 'fixed');
+       $('footer').css(&quot;position&quot;, 'fixed');
+
+  });
+}
+
+</code></pre></p>
+</li>
+<li>
+<p>得到地理位置<br />
+<pre><code class="javascript">function getLocation(callback){
+  if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(
+              function(p){
+                  callback(p.coords.latitude, p.coords.longitude);
+              },
+              function(e){
+                  var msg = e.code + &quot;\n&quot; + e.message;
+              }
+      );
+  }
+}
+</code></pre></p>
+</li>
+<li>
+<p><a href="http://isux.tencent.com/web-app-rem.html">rem计算适配</a><br />
+<pre><code class="javascript">(function(doc, win){
+  var docEl = doc.documentElement,
+      resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+      recalc = function(){
+          var clientWidth = docEl.clientWidth;
+          if(!clientWidth) return;
+          docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+      };
+
+  if(!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</code></pre></p>
+</li>
+<li>
+<p><a href="http://www.html-js.com/article/3041">另外一种rem方案</a><br />
+<pre><code class="javascript">var dpr, rem, scale;
+var docEl = document.documentElement;
+var fontEl = document.createElement('style');
+var metaEl = document.querySelector('meta[name=&quot;viewport&quot;]');
+
+dpr = window.devicePixelRatio || 1;
+rem = docEl.clientWidth * 2 / 10;
+scale = 1 / dpr;
+
+
+// 设置viewport，进行缩放，达到高清效果
+metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+
+// 设置data-dpr属性，留作的css hack之用
+docEl.setAttribute('data-dpr', dpr);
+
+// 动态写入样式
+docEl.firstElementChild.appendChild(fontEl);
+fontEl.innerHTML = 'html{font-size:' + rem + 'px!important;}';
+
+// 给js调用的，某一dpr下rem和px之间的转换函数
+window.rem2px = function(v) {
+    v = parseFloat(v);
+    return v * rem;
+};
+window.px2rem = function(v) {
+    v = parseFloat(v);
+    return v / rem;
+};
+
+window.dpr = dpr;
+window.rem = rem;
+</code></pre></p>
+</li>
+<li>
+<p>获取js所在路径<br />
+<pre><code class="js">function getJsDir (src) {
+    var script = null;
+
+    if (src) {
+        script = [].filter.call(document.scripts, function (v) {
+            return v.src.indexOf(src) !== -1;
+        })[0];
+    } else {
+        script = document.scripts[document.scripts.length - 1];
+    }
+
+    return script ? script.src.substr(0, script.src.lastIndexOf('/')) : script;
+}
+</code></pre></p>
+</li>
+<li>
+<p>从全局捕获错误<br />
+<pre><code class="js">window.onerror = function (errMsg, scriptURI, lineNumber, columnNumber, errorObj) {
+    setTimeout(function () {
+        var rst = {
+            &quot;错误信息：&quot;: errMsg,
+            &quot;出错文件：&quot;: scriptURI,
+            &quot;出错行号：&quot;: lineNumber,
+            &quot;出错列号：&quot;: columnNumber,
+            &quot;错误详情：&quot;: errorObj
+        };
+
+        alert(JSON.stringify(rst, null, 10));
+    });
+};
+</code></pre></p>
+</li>
+<li>
+<p><a href="https://www.zhihu.com/question/26228251/answer/32405529">如何通过 js 修改微信浏览器的title?</a><br />
+<pre><code class="javascript">var $body = $('body');
+document.title = 'title'; // hack在微信等webview中无法修改document.title的情况
+var $iframe = $('&lt;iframe src=&quot;/favicon.ico&quot;&gt;&lt;/iframe&gt;').on('load', function(){
+    setTimeout(function(){
+        $iframe.off('load').remove()
+    }, 0)
+}).appendTo($body)
+</code></pre></p>
+</li>
+</ul>
+<h4 id="1-js"><a name="user-content-1-js" href="#1-js" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1. 常用方法 - js</h4>
+<ul>
+<li>
+<p>字符串长度截取<br />
+<pre><code class="js">function cutstr(str, len) {
+    var temp,
+        icount = 0,
+        patrn = /[^\x00-\xff]/，
+        strre = &quot;&quot;;
+    for (var i = 0; i &lt; str.length; i++) {
+        if (icount &lt; len - 1) {
+            temp = str.substr(i, 1);
+                if (patrn.exec(temp) == null) {
+                   icount = icount + 1
+            } else {
+                icount = icount + 2
+            }
+            strre += temp
+            } else {
+            break;
+        }
+    }
+    return strre + &quot;...&quot;
+}
+</code></pre></p>
+</li>
+<li>
+<p>替换全部<br />
+<pre><code class="js">String.prototype.replaceAll = function(s1, s2) {
+    return this.replace(new RegExp(s1, &quot;gm&quot;), s2)
+}
+````
+
+- 清除空格
+```js
+String.prototype.trim = function() {
+    var reExtraSpace = /^\s*(.*?)\s+$/;
+    return this.replace(reExtraSpace, &quot;$1&quot;)
+}
+</code></pre></p>
+</li>
+<li>
+<p>清除左空格/右空格<br />
+<pre><code class="js">function ltrim(s){ return s.replace( /^(\s*|　*)/, &quot;&quot;); }
+function rtrim(s){ return s.replace( /(\s*|　*)$/, &quot;&quot;); }
+</code></pre></p>
+</li>
+<li>判断是否以某个字符串开头<br />
+<pre><code class="js">String.prototype.startWith = function (s) {
+    return this.indexOf(s) == 0
+}
+</code></pre></li>
+<li>判断是否以某个字符串结束<br />
+<pre><code class="js">String.prototype.endWith = function (s) {
+    var d = this.length - s.length;
+    return (d &gt;= 0 &amp;&amp; this.lastIndexOf(s) == d)
+}
+</code></pre></li>
+<li>转义html标签<br />
+<pre><code class="js">function HtmlEncode(text) {
+    return text.replace(/&amp;/g, '&amp;').replace(/\&quot;/g, '&quot;').replace(/&lt;/g, '&lt;').replace(/&gt;/g, '&gt;')
+}
+</code></pre></li>
+<li>时间日期格式转换<br />
+<pre><code class="js">Date.prototype.Format = function(formatStr) {
+    var str = formatStr;
+    var Week = ['日', '一', '二', '三', '四', '五', '六'];
+    str = str.replace(/yyyy|YYYY/, this.getFullYear());
+    str = str.replace(/yy|YY/, (this.getYear() % 100) &gt; 9 ? (this.getYear() % 100).toString() : '0' + (this.getYear() % 100));
+    str = str.replace(/MM/, (this.getMonth() + 1) &gt; 9 ? (this.getMonth() + 1).toString() : '0' + (this.getMonth() + 1));
+    str = str.replace(/M/g, (this.getMonth() + 1));
+    str = str.replace(/w|W/g, Week[this.getDay()]);
+    str = str.replace(/dd|DD/, this.getDate() &gt; 9 ? this.getDate().toString() : '0' + this.getDate());
+    str = str.replace(/d|D/g, this.getDate());
+    str = str.replace(/hh|HH/, this.getHours() &gt; 9 ? this.getHours().toString() : '0' + this.getHours());
+    str = str.replace(/h|H/g, this.getHours());
+    str = str.replace(/mm/, this.getMinutes() &gt; 9 ? this.getMinutes().toString() : '0' + this.getMinutes());
+    str = str.replace(/m/g, this.getMinutes());
+    str = str.replace(/ss|SS/, this.getSeconds() &gt; 9 ? this.getSeconds().toString() : '0' + this.getSeconds());
+    str = str.replace(/s|S/g, this.getSeconds());
+    return str
+}
+</code></pre></li>
+<li>判断是否为数字类型<br />
+<pre><code class="js">function isDigit(value) {
+    var patrn = /^[0-9]*$/;
+    if (patrn.exec(value) == null || value == &quot;&quot;) {
+        return false
+    } else {
+        return true
+    }
+}
+</code></pre></li>
+<li>设置cookie值<br />
+<pre><code class="js">function setCookie(name, value, Hours) {
+    var d = new Date();
+    var offset = 8;
+    var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+    var nd = utc + (3600000 * offset);
+    var exp = new Date(nd);
+    exp.setTime(exp.getTime() + Hours * 60 * 60 * 1000);
+    document.cookie = name + &quot;=&quot; + escape(value) + &quot;;path=/;expires=&quot; + exp.toGMTString() + &quot;;domain=360doc.com;&quot;
+}
+</code></pre></li>
+<li>获取cookie值<br />
+<pre><code class="js">function getCookie(name) {
+    var arr = document.cookie.match(new RegExp(&quot;(^| )&quot; + name + &quot;=([^;]*)(;|$)&quot;));
+    if (arr != null) return unescape(arr[2]);
+    return null
+}
+</code></pre></li>
+<li>加载样式文件表<br />
+<pre><code class="js">function LoadStyle(url) {
+    try {
+        document.createStyleSheet(url)
+    } catch(e) {
+        var cssLink = document.createElement('link');
+        cssLink.rel = 'stylesheet';
+        cssLink.type = 'text/css';
+        cssLink.href = url;
+        var head = document.getElementsByTagName('head')[0];
+        head.appendChild(cssLink)
+    }
+}
+</code></pre></li>
+<li>返回脚本内容<br />
+<pre><code class="js">function evalscript(s) {
+    if(s.indexOf('&lt;script') == -1) return s;
+    var p = /&lt;script[^\&gt;]*?&gt;([^\x00]*?)&lt;\/script&gt;/ig;
+    var arr = [];
+    while(arr = p.exec(s)) {
+        var p1 = /&lt;script[^\&gt;]*?src=\&quot;([^\&gt;]*?)\&quot;[^\&gt;]*?(reload=\&quot;1\&quot;)?(?:charset=\&quot;([\w\-]+?)\&quot;)?&gt;&lt;\/script&gt;/i;
+        var arr1 = [];
+        arr1 = p1.exec(arr[0]);
+        if(arr1) {
+            appendscript(arr1[1], '', arr1[2], arr1[3]);
+        } else {
+            p1 = /&lt;script(.*?)&gt;([^\x00]+?)&lt;\/script&gt;/i;
+            arr1 = p1.exec(arr[0]);
+            appendscript('', arr1[2], arr1[1].indexOf('reload=') != -1);
+        }
+    }
+    return s;
+}
+</code></pre></li>
+<li>清除脚本内容<br />
+<pre><code class="js">function stripscript(s) {
+    return s.replace(/&lt;script.*?&gt;.*?&lt;\/script&gt;/ig, '');
+}
+</code></pre></li>
+<li>动态加载脚本文件<br />
+<pre><code class="js">function appendscript(src, text, reload, charset) {
+    var id = hash(src + text);
+    if(!reload &amp;&amp; in_array(id, evalscripts)) return;
+    if(reload &amp;&amp; $(id)) {
+        $(id).parentNode.removeChild($(id));
+    }
+
+    evalscripts.push(id);
+    var scriptNode = document.createElement(&quot;script&quot;);
+    scriptNode.type = &quot;text/javascript&quot;;
+    scriptNode.id = id;
+    scriptNode.charset = charset ? charset : (BROWSER.firefox ? document.characterSet : document.charset);
+    try {
+        if(src) {
+            scriptNode.src = src;
+            scriptNode.onloadDone = false;
+            scriptNode.onload = function () {
+                scriptNode.onloadDone = true;
+                JSLOADED[src] = 1;
+             };
+             scriptNode.onreadystatechange = function () {
+                 if((scriptNode.readyState == 'loaded' || scriptNode.readyState == 'complete') &amp;&amp; !scriptNode.onloadDone) {
+                    scriptNode.onloadDone = true;
+                    JSLOADED[src] = 1;
+                }
+             };
+        } else if(text){
+            scriptNode.text = text;
+        }
+        document.getElementsByTagName('head')[0].appendChild(scriptNode);
+    } catch(e) {}
+}
+</code></pre></li>
+<li>返回按ID检索的元素对象<br />
+<pre><code class="js">function $(id) {
+    return !id ? null : document.getElementById(id);
+}
+</code></pre></li>
+<li>检验URL链接是否有效<br />
+<pre><code class="js">function getUrlState(URL){
+    var xmlhttp = new ActiveXObject(&quot;microsoft.xmlhttp&quot;);
+    xmlhttp.Open(&quot;GET&quot;,URL, false);
+    try{
+            xmlhttp.Send();
+    }catch(e){
+    }finally{
+        var result = xmlhttp.responseText;
+        if(result){
+            if(xmlhttp.Status==200){
+                return(true);
+             }else{
+                   return(false);
+             }
+         }else{
+             return(false);
+         }
+    }
+}
+</code></pre></li>
+<li>获取当前路径<br />
+<pre><code class="js">var currentPageUrl = &quot;&quot;;
+if (typeof this.href === &quot;undefined&quot;) {
+    currentPageUrl = document.location.toString().toLowerCase();
+}else {
+    currentPageUrl = this.href.toString().toLowerCase();
+}
+</code></pre></li>
+<li>获取页面高度<br />
+<pre><code class="js">function getPageHeight(){
+    var g = document, a = g.body, f = g.documentElement, d = g.compatMode == &quot;BackCompat&quot;
+                    ? a
+                    : g.documentElement;
+    return Math.max(f.scrollHeight, a.scrollHeight, d.clientHeight);
+}
+</code></pre></li>
+<li>获取页面可视宽度<br />
+<pre><code class="js">function getPageViewWidth(){
+    var d = document, a = d.compatMode == &quot;BackCompat&quot; ?
+                       d.body: d.documentElement;
+    return a.clientWidth;
+}
+</code></pre></li>
+<li>获取页面宽度<br />
+<pre><code class="js">function getPageWidth(){
+    var g = document, a = g.body, f = g.documentElement, d = g.compatMode == &quot;BackCompat&quot;?
+                          a: g.documentElement;
+    return Math.max(f.scrollWidth, a.scrollWidth, d.clientWidth);
+}
+</code></pre></li>
+<li>随机数时间戳<br />
+<pre><code class="js">function uniqueId(){
+    var a=Math.random,b=parseInt;
+    return Number(new Date()).toString()+b(10*a())+b(10*a())+b(10*a());
+}
+</code></pre></li>
+<li>日期格式化函数<br />
+<pre><code class="js">Date.prototype.format = function(format){
+    var o = {
+        &quot;M+&quot; : this.getMonth()+1, //month
+        &quot;d+&quot; : this.getDate(),    //day
+        &quot;h+&quot; : this.getHours(),   //hour
+        &quot;m+&quot; : this.getMinutes(), //minute
+        &quot;s+&quot; : this.getSeconds(), //second
+        &quot;q+&quot; : Math.floor((this.getMonth()+3)/3),  //quarter
+        &quot;S&quot; : this.getMilliseconds() //millisecond
+    };
+    if(/(y+)/.test(format)) format=format.replace(RegExp.$1,
+(this.getFullYear()+&quot;&quot;).substr(4 - RegExp.$1.length));
+    for(var k in o){
+        if(new RegExp(&quot;(&quot;+ k +&quot;)&quot;).test(format))
+            format = format.replace(RegExp.$1,RegExp.$1.length==1 ? o[k] :(&quot;00&quot;+ o[k]).substr((&quot;&quot;+ o[k]).length));
+    }
+    return format;
+}
+//调用
+//new Date().format(&quot;yyyy-MM-dd hh:mm:ss&quot;);
+</code></pre></li>
+<li>返回顶部的通用方法<br />
+<pre><code class="js">function backTop(btnId) {
+    var btn = document.getElementById(btnId);
+    var d = document.documentElement;
+    var b = document.body;
+    window.onscroll = set;
+    btn.style.display = &quot;none&quot;;
+    btn.onclick = function() {
+        btn.style.display = &quot;none&quot;;
+        window.onscroll = null;
+        this.timer = setInterval(function() {
+            d.scrollTop -= Math.ceil((d.scrollTop + b.scrollTop) * 0.1);
+            b.scrollTop -= Math.ceil((d.scrollTop + b.scrollTop) * 0.1);
+            if ((d.scrollTop + b.scrollTop) == 0) clearInterval(btn.timer, window.onscroll = set);
+            }, 10);
+    };
+    function set() {
+        btn.style.display = (d.scrollTop + b.scrollTop &gt; 100) ? 'block': &quot;none&quot;
+    }
+};
+backTop('goTop');
+</code></pre></li>
+<li>获得URL中GET参数值<br />
+<pre><code class="js">// 用法：如果地址是 test.htm?t1=1&amp;t2=2&amp;t3=3, 那么能取得：GET[&quot;t1&quot;], GET[&quot;t2&quot;], GET[&quot;t3&quot;]
+function get_get(){
+    querystr = window.location.href.split(&quot;?&quot;)
+    if(querystr[1]){
+        GETs = querystr[1].split(&quot;&amp;&quot;);
+        GET = [];
+        for(i=0;i&lt;GETs.length;i++){
+              tmp_arr = GETs.split(&quot;=&quot;)
+              key=tmp_arr[0]
+              GET[key] = tmp_arr[1]
+        }
+    }
+    return querystr[1];
+}
+</code></pre></li>
+<li>数组去重<br />
+<pre><code class="js">String.prototype.unique=function(){
+    var x=this.split(/[\r\n]+/);
+    var y='';
+    for(var i=0;i&lt;x.length;i++){
+        if(!new RegExp(&quot;^&quot;+x.replace(/([^\w])/ig,&quot;\\$1&quot;)+&quot;$&quot;,&quot;igm&quot;).test(y)){
+            y+=x+&quot;\r\n&quot;
+        }
+    }
+    return y
+};
+</code></pre></li>
+<li>按字典顺序，对每行进行数组排序<br />
+<pre><code class="js">function SetSort(){
+    var text=K1.value.split(/[\r\n]/).sort().join(&quot;\r\n&quot;);//顺序
+    var test=K1.value.split(/[\r\n]/).sort().reverse().join(&quot;\r\n&quot;);//反序
+    K1.value=K1.value!=text?text:test;
+}
+</code></pre></li>
+<li>字符串反序输出<br />
+<pre><code class="js">function IsReverse(text){
+    return text.split('').reverse().join('');
+}
+</code></pre></li>
+<li>金额大写转换函数<br />
+<pre><code class="js">//格式转换
+function transform(tranvalue) {
+    try {
+        var i = 1;
+        var dw2 = new Array(&quot;&quot;, &quot;万&quot;, &quot;亿&quot;); //大单位
+        var dw1 = new Array(&quot;拾&quot;, &quot;佰&quot;, &quot;仟&quot;); //小单位
+        var dw = new Array(&quot;零&quot;, &quot;壹&quot;, &quot;贰&quot;, &quot;叁&quot;, &quot;肆&quot;, &quot;伍&quot;, &quot;陆&quot;, &quot;柒&quot;, &quot;捌&quot;, &quot;玖&quot;); //整数部分用
+        //以下是小写转换成大写显示在合计大写的文本框中
+        //分离整数与小数
+        var source = splits(tranvalue);
+        var num = source[0];
+        var dig = source[1];
+        //转换整数部分
+        var k1 = 0; //计小单位
+        var k2 = 0; //计大单位
+        var sum = 0;
+        var str = &quot;&quot;;
+        var len = source[0].length; //整数的长度
+        for (i = 1; i &lt;= len; i++) {
+              var n = source[0].charAt(len - i); //取得某个位数上的数字
+              var bn = 0;
+              if (len - i - 1 &gt;= 0) {
+                bn = source[0].charAt(len - i - 1); //取得某个位数前一位上的数字
+              }
+              sum = sum + Number(n);
+              if (sum != 0) {
+                str = dw[Number(n)].concat(str); //取得该数字对应的大写数字，并插入到str字符串的前面
+                if (n == '0') sum = 0;
+              }
+              if (len - i - 1 &gt;= 0) { //在数字范围内
+                if (k1 != 3) { //加小单位
+                      if (bn != 0) {
+                        str = dw1[k1].concat(str);
+                      }
+                      k1++;
+                } else { //不加小单位，加大单位
+                      k1 = 0;
+                      var temp = str.charAt(0);
+                      if (temp == &quot;万&quot; || temp == &quot;亿&quot;) //若大单位前没有数字则舍去大单位
+                      str = str.substr(1, str.length - 1);
+                      str = dw2[k2].concat(str);
+                      sum = 0;
+                }
+              }
+              if (k1 == 3){ //小单位到千则大单位进一
+                k2++;
+              }
+        }
+        //转换小数部分
+        var strdig = &quot;&quot;;
+        if (dig != &quot;&quot;) {
+              var n = dig.charAt(0);
+              if (n != 0) {
+                strdig += dw[Number(n)] + &quot;角&quot;; //加数字
+              }
+              var n = dig.charAt(1);
+              if (n != 0) {
+                strdig += dw[Number(n)] + &quot;分&quot;; //加数字
+              }
+        }
+        str += &quot;元&quot; + strdig;
+    } catch(e) {
+        return &quot;0元&quot;;
+    }
+    return str;
+}
+//拆分整数与小数
+function splits(tranvalue) {
+    var value = new Array('', '');
+    temp = tranvalue.split(&quot;.&quot;);
+    for (var i = 0; i &lt; temp.length; i++) {
+        value = temp;
+    }
+    return value;
+}
+</code></pre></li>
+</ul></article></body></html>
